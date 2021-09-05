@@ -32,7 +32,7 @@ function preload(){
   
   jumpSound = loadSound("jump.mp3")
   dieSound = loadSound("die.mp3")
-  checkPointSound = loadSound("checkPoint.mp3")
+  
 }
 
 function setup() {
@@ -93,9 +93,7 @@ function draw() {
     //scoring
     score = score + Math.round(frameCount/60);
     
-    if(score>0 && score%100 === 0){
-       checkPointSound.play() 
-    }
+    
     
     if (ground.x < 0){
       ground.x = ground.width/2;
